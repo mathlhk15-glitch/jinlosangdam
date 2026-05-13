@@ -621,6 +621,15 @@ body[data-ws-page="counseling"] .ws-footer{
       <div class="nav-item" onclick="window.open('https://mathlhk15-glitch.github.io/worldcup/','_blank')">
         <span class="nav-icon">🏆</span> 진로 월드컵
       </div>
+      <div class="nav-section">입결 탐색</div>
+      <div class="nav-item" onclick="openIpsi3()">
+        <span class="nav-icon">📊</span> 교과 입결 — 3학년
+        <span style="font-size:9px;color:rgba(255,255,255,0.35);margin-left:auto">교과</span>
+      </div>
+      <div class="nav-item" onclick="openIpsi12()">
+        <span class="nav-icon">📈</span> 교과 입결 — 1·2학년
+        <span style="font-size:9px;color:rgba(255,255,255,0.35);margin-left:auto">교과</span>
+      </div>
       <div class="nav-section">관리</div>
       <div class="nav-item" data-screen="students" onclick="nav('students')">
         <span class="nav-icon">👥</span> 학생 관리
@@ -7768,6 +7777,14 @@ function saveChecklist(sessionId, studentId){
     if(idx>=0){ sessions[idx].checklist = items; DB.set('sessions', sessions); }
   }
   document.getElementById('checklist-modal')?.remove();
+}
+
+/* ── 입결 탐색 외부 링크 ── */
+function openIpsi3(){
+  window.open('https://mathlhk15-glitch.github.io/ipsi2','_blank');
+}
+function openIpsi12(){
+  window.open('https://mathlhk15-glitch.github.io/2028ipsi2','_blank');
 }
 
 function toggleChecklistItem(sessionId, idx, done){
